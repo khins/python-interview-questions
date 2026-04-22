@@ -17,3 +17,7 @@ def test_single_char():
 
 def test_palindrome():
     assert reverse_string("madam") == "madam"
+
+
+def test_intentional_failure():
+    assert reverse_string("hello") == "hello"
