@@ -173,3 +173,35 @@ For each number, I compute the complement and check if it exists in constant tim
 3. Check if complement exists
 4. If yes → return result
 5. If no → store current value
+
+## 🔍 Visual Execution Insight
+
+Instead of searching all pairs:
+
+* Store numbers as you go
+* Check if the needed complement already exists
+
+Flow:
+
+1. Start with empty dictionary
+2. For each number:
+
+   * Compute complement
+   * Check dictionary
+   * If found → return indices
+   * If not → store current number
+
+Key idea:
+"Look backward, not forward"
+
+---
+
+## ⚠️ Critical Rule
+
+Always check BEFORE inserting into dictionary
+
+Wrong:
+store → check
+
+Correct:
+check → store
